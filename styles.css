@@ -1,6 +1,17 @@
+body{
+    background-color: #FFA62F;
+}
+
+
+.hidden{
+    display: none;
+}
+
+
 h1, h3{
     padding-top: 10px;
     text-align: center;
+    color: black;
 }
 
 .btn{
@@ -15,7 +26,7 @@ h1, h3{
     margin: auto;
     width: 50%;
     height: 100%;
-    background-color: white;
+    background-color: #FFA62F;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 5px;
@@ -25,7 +36,7 @@ h1, h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
+    background-color: #FFE8C8;
     width: 100%;
     height: 100px;
 }
