@@ -1,9 +1,6 @@
 init();
 
-
-
 function init(){
-
     first_selected = null;
     cards = document.querySelectorAll("div.card");
     addNums(cards);
@@ -31,7 +28,13 @@ function addNums(cards){
             num = Math.floor(Math.random() * 8) + 1;
         }
         usedCount[num - 1]++;
-        cards[i].innerHTML = num;
+        // cards[i].innerHTML = num;
+        if(num == 1){
+            myimg = document.createElement("img");
+            myimg.setAttribute("src", "1.png");
+            myimg.setAttribute("style", "height:140px;width:100px;")
+            cards[i].appendChild(myimg);
+        }
     }
 
 }

@@ -1,42 +1,47 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #FFA62F;
 }
 
-
-.hidden{
+.hidden {
     display: none;
 }
 
-
-h1, h3{
+h1, h3 {
     padding-top: 10px;
     text-align: center;
     color: black;
 }
 
-.btn{
-    padding-top: 40px;
-    margin: auto;
-    max-width: 20px;
+.btn {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
 }
 
-.game{
+.game {
     padding-top: 50px;
     display: grid;
     margin: auto;
-    width: 50%;
-    height: 100%;
+    width: calc(4 * 100px + 3 * 30px); /* 4 cards * width + 3 gaps */
+    height: calc(4 * 140px + 3 * 30px); /* 4 cards * height + 3 gaps */
     background-color: #FFA62F;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 5px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 140px);
+    gap: 30px;
 }
 
-.card{
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #FFE8C8;
     width: 100%;
-    height: 100px;
+    height: 100%;
+    border: 1px solid black;
 }
