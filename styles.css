@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+img{
+    height:140px;
+    width:100px;
+}
+
 body {
     background-color: #FFA62F;
 }
