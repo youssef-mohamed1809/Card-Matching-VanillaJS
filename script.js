@@ -29,12 +29,10 @@ function addNums(cards){
         }
         usedCount[num - 1]++;
         // cards[i].innerHTML = num;
-        if(num == 1){
-            myimg = document.createElement("img");
-            myimg.setAttribute("src", "1.png");
-            myimg.setAttribute("style", "height:140px;width:100px;")
-            cards[i].appendChild(myimg);
-        }
+        myimg = document.createElement("img");
+        myimg.setAttribute("src", `cards/${num}.png`);
+        myimg.setAttribute("style", "height:140px;width:100px;")
+        cards[i].appendChild(myimg);
     }
 
 }
