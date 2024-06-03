@@ -1,12 +1,30 @@
+/* styles.css */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-img{
-    height:140px;
-    width:100px;
+.screen{
+    display: flex;
+}
+
+.side-screen{
+    margin: auto;
+}
+
+.btn{
+    padding: 0;
+    margin: auto;
+
+}
+.game.toggle-click{
+    pointer-events: none;
+}
+
+img {
+    height: 140px;
+    width: 100px;
 }
 
 body {
@@ -42,11 +60,46 @@ h1, h3 {
 }
 
 .card {
+    perspective: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #FFE8C8; */
     width: 100%;
     height: 100%;
-    /* border: 1px solid black; */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card.is-flipped {
+    transform: rotateY(0deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front {
+    transition: transform 0.6s;
+    transform: rotateY(180deg);
+}
+
+.back {
+    transition: transform 0.6s;
+    transform: rotateY(0deg);
+}
+
+.card.is-flipped .front {
+    transition: transform 0.6s;
+    transform: rotateY(0deg);
+}
+
+.card.is-flipped .back {
+    transition: transform 0.6s;
+    transform: rotateY(-180deg);
 }
