@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Matching</title>
+    <link rel="stylesheet" href="./styles/card-matching-styles.css" />
+  </head>
+  <body>
+    <audio src="assets/audio/flip_card.mp3" id="flip_card_sound"></audio>
+    <audio src="assets/audio/right_answer.mp3" id="right_answer"></audio>
+    <audio src="assets/audio/win.mp3" id="win"></audio>
+    <audio src="assets/audio/wrong_answer.mp3" id="wrong_answer"></audio>
+
+    <div class="screen">
+      <div class="game">
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+        <div class="card">
+          <div class="front"></div>
+          <div class="back"><img src="assets/cards/card-back.png" /></div>
+        </div>
+      </div>
+      <div class="side-screen">
+        <h3>Number of Clicks: <span id="num_of_clicks">0</span></h3>
+        <br />
+        <button class="btn" onclick="reset_game()">Reset</button>
+        <button class="btn" onclick="home()">Home</button>
+      </div>
+    </div>
+
+    <script src="./scripts/game-logic.js"></script>
+  </body>
+</html>

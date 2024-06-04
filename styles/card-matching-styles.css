@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background-color: #01204E; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+html{
+    background-color: #01204E;
 }
 
 .screen{
@@ -38,13 +44,17 @@ body {
 h1, h3 {
     padding-top: 10px;
     text-align: center;
-    color: black;
+    color: #F6DCAC;
 }
 
 .btn {
-    padding-top: 70px;
-    display: flex;
-    justify-content: center;
+    margin-top: 20px;
+    background-color: #F6DCAC;
+    border: 2px solid #F6DCAC;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+    width: 75px;
 }
 
 .game {
@@ -53,13 +63,14 @@ h1, h3 {
     margin: auto;
     width: calc(4 * 100px + 3 * 30px); /* 4 cards * width + 3 gaps */
     height: calc(4 * 140px + 3 * 30px); /* 4 cards * height + 3 gaps */
-    background-color: #FFA62F;
+    background-color: #01204E;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(4, 140px);
     gap: 30px;
 }
 
 .card {
+    position: relative;
     perspective: 1000px;
     display: flex;
     justify-content: center;
@@ -102,4 +113,8 @@ h1, h3 {
 .card.is-flipped .back {
     transition: transform 0.6s;
     transform: rotateY(-180deg);
+}
+
+.screen{
+    background-color: #01204E;
 }
