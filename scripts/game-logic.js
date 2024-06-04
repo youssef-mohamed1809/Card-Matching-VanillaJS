@@ -89,11 +89,11 @@ function home(){
 function win_game(){
     win_sound.play();
     game.classList.toggle("toggle-click");
+    window.alert("Congratulations, you won!");
 }
 
 function game_lost(){
     window.alert("You Lost! Press Reset to try again");
-    game.classList.toggle("toggle-click");
 }
 
 function card_selected(card){
@@ -105,13 +105,17 @@ function card_selected(card){
         first_card = card;
 
         if(current_flips == FLIPS){
+            synchronousTimer(5000, 1000);
             game_lost();
         }
 
     }else if(first_card === card){
         first_card = null;
+        if(current_flips == FLIPS){
+            synchronousTimer(5000, 1000);
+            game_lost();
+        }
     }else{
-        
         game.classList.toggle("toggle-click");
         front = first_card.querySelector(".front");
         front_img = front.querySelector("img");
@@ -134,6 +138,7 @@ function card_selected(card){
                 first_card.classList.toggle("is-flipped");
                 card.classList.toggle("is-flipped");
                 if(current_flips == FLIPS){
+
                     game_lost();
                 }
             }
@@ -144,7 +149,7 @@ function card_selected(card){
                 win_game();
             }
 
-        }, 1000);
+        }, 5000);
 
         
     }
